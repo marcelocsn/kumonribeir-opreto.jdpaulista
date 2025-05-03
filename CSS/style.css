@@ -63,38 +63,52 @@ body{
     background-color: var(--bg-color-01);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.titulo-location{
-    align-items: center;
-    text-align: center;
+/* Título da localização */
+.titulo-location {
     font-size: 2.2rem;
     margin-bottom: 10px;
     text-align: center;
 }
 
+/* Parágrafo com o endereço */
 .titulo-location-paragrafo {
-    display: block; /* Garantindo que ocupe toda a largura disponível */
+    display: block;
     font-size: 1.2rem;
     margin-top: 10px;
-    text-align: center; /* Centraliza o texto */
-    width: 100%; /* Faz o parágrafo ocupar toda a largura do container */
+    text-align: center;
+    width: 100%;
 }
 
-.titulo-location-paragrafo a{
-    list-style: none;
+.titulo-location-paragrafo a {
     color: #ffffff;
+    text-decoration: none;
 }
 
-
+.titulo-location-paragrafo a:hover {
+    text-decoration: underline;
+}
 
 /* Estilizando o mapa responsivo */
-.location iframe {
+.location-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
     width: 100%;
-    max-width: 600px;
-    height: 600px;
+}
+
+.location-content iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--main-color);
+    border: 0;
 }
 
 
@@ -559,9 +573,26 @@ footer {
         margin: 0.5rem 0;
     }
 
-    section{
-        padding: 6rem 2.5rem;
+    section {
+        padding: 4rem 2rem;
     }
+
+   
+        .location-content iframe {
+          max-width: 100%;
+          height: 250px; /* altura reduzida para melhor visualização em telas pequenas */
+        }
+      
+        .titulo-location {
+          font-size: 1.6rem; /* reduzindo um pouco o tamanho do título */
+        }
+      
+        .titulo-location-paragrafo {
+          font-size: 1rem;
+          padding: 0 10px; /* espaço lateral para o texto não encostar nas bordas */
+        }
+      
+      
 
     .home, .about{
         flex-direction: column;
@@ -609,6 +640,22 @@ footer {
 
 @media (min-width:576px){
 
+  
+        .location-content iframe {
+          max-width: 100%;
+          height: 250px; /* altura reduzida para melhor visualização em telas pequenas */
+        }
+      
+        .titulo-location {
+          font-size: 1.6rem; /* reduzindo um pouco o tamanho do título */
+        }
+      
+        .titulo-location-paragrafo {
+          font-size: 1rem;
+          padding: 0 10px; /* espaço lateral para o texto não encostar nas bordas */
+        }
+      
+      
     .home-img, .about-img {
         width: 65%;
         max-width: 65%;
